@@ -69,8 +69,9 @@ function over(){
 		if (left_P<3 ){
 			alert("проиграл!");
 			location.reload();
-		} else if(left_P>finish){
-				alert("Молодец! Иди возьми кусочек сахара!")
+		} else if (left_P>finish) {
+				alert("Молодец! Иди возьми кусочек сахара!");
+				location.reload();
 		    }
 
 		if (top_P<3 || top_P>204){
