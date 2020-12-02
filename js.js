@@ -24,6 +24,7 @@ let users2 = {
 
 let poz_box = document.getElementById('game');
 let poz_box_shit = document.getElementsByTagName('P')
+let poz_finish= document.getElementById('finish')
 //alert(poz_box_shit[0].offsetTop);
 
 function Counter() {
@@ -64,15 +65,17 @@ function over(){
 
 	let left_P = poz_box.offsetLeft;
 	let top_P = poz_box.offsetTop;	
+	let finish = poz_finish.offsetLeft;
 		if (left_P<3 ){
-			alert("проиграл");
-		} else if(left_P>1200){
-				alert("победа")
+			alert("проиграл!");
+			location.reload();
+		} else if(left_P>finish){
+				alert("Молодец! Иди возьми кусочек сахара!")
 		    }
 
 		if (top_P<3 || top_P>204){
 			danse.pause();	
-			alert("проиграл");
+			alert("проиграл!");
 			location.reload();
 		}
 	fun_grov();
@@ -102,7 +105,7 @@ function fun_grov(){
 for (let i=0; i<poz_box_shit.length; i++){
 	let left_P_Shit = poz_box_shit[i].offsetLeft;
 	poz_box_shit[i].style.cssText+="left:"+(left_P_Shit-5)+"px;"
-	if (left_P_Shit<=50){
+	if (left_P_Shit<=5){
 		fun_again_start()
 			}
  }
