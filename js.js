@@ -16,9 +16,9 @@ danse.src = "gta.mp3";
 var danse_G = new Audio()
 danse_G.src = "kl.mp3";
 var svin = new Audio()
-svin.src = "skysh.ogg";
+svin.src = "skysh.mp3";
 var finvin = new Audio();
-finvin.src = "fin.ogg"
+finvin.src = "fin.mp3"
 
 
 
