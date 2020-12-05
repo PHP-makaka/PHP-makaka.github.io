@@ -80,7 +80,7 @@ function fun_repet(){
 ///////////////////////////////////// начало игры
 //slideBar.className='mainOn';
 (function start_game(){
-  let aa = prompt('как тебя зовут?','Илья')
+  let aa = prompt('как тебя зовут?','Готовчиц')
   alert ('привет '+aa+', а я голодный сыч, давай начнем игру ?')
   my_name.innerHTML=aa+", залипай";
   //win_flex.className='flex_container';
