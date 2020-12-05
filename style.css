@@ -1,0 +1,192 @@
+#calo{
+	background-image: url(https://export.by/images/uploads/2017/03/14/40065-1489485734.png);
+	background-size: 90%;
+    background-position: 55px 47px;
+}	
+
+.up:hover,.down:hover,.right:hover, .left:hover{
+	transition-duration: 0.5s;
+	border-radius: 20%;
+	background-color: green;
+}
+.flex_container_none{
+	display: none;
+}
+.flex_container{
+	background-image: url(https://image.freepik.com/free-photo/_164357-194.jpg);
+	background-size: 100%;
+	background-color: grey;
+	width: 100%;height:100vh; 
+	display: flex; 
+	justify-content: center; 
+	text-align: center; 
+	line-height: 50vh; 
+}
+
+
+@keyframes slidein {
+  from 0%{
+    background-position: 0px 0px; 
+  }
+  50%{
+  	background-position: 10000px 10000px;
+  }
+
+  to 100%{
+  	background-position: 0px;
+    }
+}
+.main_game{
+  	animation-name: slidein;
+	animation-duration: 600s;
+	margin: auto;
+	padding: auto; 
+	background-image:url(https://i.imgur.com/e1zevgQ.png);
+	background-size: 10%;
+	width: 100%;
+	height: 100vh;
+	background-color: grey;
+}
+.main_game_of{
+	display: none;
+}
+
+.main_game_slidebar:hover{
+	animation-name: slidein;
+	animation-duration: 300s;
+	background-image: url(https://export.by/images/uploads/2017/03/14/40065-1489485734.png);
+	background-size: 20%;
+    background-position: 55px 47px;
+
+}
+.main_game_slidebar{
+
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	padding: auto;
+	box-shadow:inset 0px 0px 20px 20px rgb(0 0 0);
+	border-radius: 5%;
+	width: 50%;
+	height: 100vh;
+	background-color: #000000ad;
+	text-align: center;
+
+}
+
+.one{
+	border-radius: 30px;
+	font-size: 2em;
+	text-align: center;
+	margin: auto;
+	padding: 3.5vh;
+	width: 70%;
+	height:auto;
+	background-color: #84849a;
+}
+.one:hover{
+	background-color: #6ae6caad;
+	cursor: default;
+}
+
+@keyframes left_slide {
+  from {
+    left: -95%; 
+  }
+
+  to {
+  	left:0%;
+    }
+}
+@keyframes left_slide_back {
+  from {
+    left: 0%; 
+  }
+
+  to {
+  	left:-100%;
+    }
+}
+.game_rools_off{
+	display: none;
+}
+.game_rools_back{
+	animation-name: left_slide_back;
+	animation-duration: 1.5s;
+	text-align: center;
+	animation-duration: 1.5s;
+	position: fixed;
+	width: 25%;
+	height: 100vh;
+	border-radius: 5%;
+	left: -50%;
+	box-shadow:inset -18px 15px 19px 0px rgb(175 166 166 / 50%);
+	background-color: #000000ad;
+	color:#e1dfff;
+}
+.game_rools{
+	animation-name: left_slide;
+	text-align: center;
+	animation-duration: 1s;
+	position: fixed;
+	width: 25%;
+	height: 100vh;
+	border-radius: 5%;
+	box-shadow:inset -18px 15px 19px 0px rgb(175 166 166 / 50%);
+	background-color: #000000ad;
+	color:#e1dfff;
+}
+.game_rools:hover{
+	background-color: #748e9ac9;
+}
+
+.game_history{
+	animation-name: right_slide;
+	text-align: center;
+	animation-duration: 1s;
+	position: fixed;
+	width: 25%;
+	height: 100vh;
+	border-radius: 5%;
+	float: right;
+	box-shadow:inset -18px 15px 19px 0px rgb(175 166 166 / 50%);
+	background-color: #000000ad;
+	color:#e1dfff;
+	left:75%;
+}
+.game_history_back{
+	animation-name: right_slide_back;
+	text-align: center;
+	animation-duration: 2s;
+	position: fixed;
+	width: 25%;
+	height: 100vh;
+	border-radius: 5%;
+	float: right;
+	box-shadow:inset -18px 15px 19px 0px rgb(175 166 166 / 50%);
+	background-color: #000000ad;
+	color:#e1dfff;
+	left:150%;
+
+}
+.game_history:hover{
+	background-color: #748e9ac9;
+}
+@keyframes right_slide {
+  from {
+    left:100%; 
+  }
+
+  to {
+  	left:75%;
+    }
+}
+@keyframes right_slide_back {
+  from {
+    left:75%; 
+  }
+
+  to {
+  	left:150%;
+    }
+}

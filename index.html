@@ -3,48 +3,66 @@
 <html lang="ru" >
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=0.4 	">
-	<title>CORONA!!!!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=0.7, maximum-scale=0.7">
+	<title>JS_LESSONS</title>
+	<link href="style.css" rel="stylesheet">
+	
 				
 </head>
-<body style="margin:0; padding: 0;">
-	<div class="mainBar"  style="  border: solid 0.2em green; width:100%; height: 250px; background-image: url(https://naked-science.ru/wp-content/uploads/2018/04/field_image_istock-516189065.jpg);background-size:100%;" >
-		<div class="box" id="game" style="width: 50px; height: 50px; background-image: url(https://sun1.beltelecom-by-minsk.userapi.com/impf/c847121/v847121351/59536/lPLPCXdL4FE.jpg?size=1280x853&quality=96&proxy=1&sign=e477e5acc2bbf296f952e77890b7d36b); background-size: 270%; background-position: -35px -10px; position:relative; border-radius: 10px;border:solid 1px red; ">			
-		</div>
-			<div id="shit" style="">
-				<p class="shit" id="problem" style="width: 20px; height: 20px; background-image: url(https://pngimg.com/uploads/comet/comet_PNG37.png);background-size: 160%; background-position:0px -12px;transform: rotate(50deg);  position: absolute; left: 800px;top: 100px;">
-					
-				</p>
-				
-				<p class="shit" id="problem" style="width: 20px; height: 20px; background-image: url(https://pngimg.com/uploads/comet/comet_PNG37.png);background-size: 160%; background-position:0px -12px;transform: rotate(50deg); position: absolute; left: 600px;top: 150px;">
-					
-				</p>
-				<p class="shit" id="problem" style="width: 20px; height: 20px; background-image: url(https://pngimg.com/uploads/comet/comet_PNG37.png);background-size: 160%; background-position:0px -12px;transform: rotate(50deg); position: absolute; left: 650px;top: 50px;">
-					
-				</p>
-				
-				<p class="shit" id="problem" style="width: 20px; height: 20px; background-image: url(https://pngimg.com/uploads/comet/comet_PNG37.png);background-size: 160%; background-position:0px -12px;transform: rotate(50deg); position: absolute; left: 300px;top: 200px;">
-					
-				</p>
-				<p class="shit" id="problem" style="width: 20px; height: 20px; background-image: url(https://pngimg.com/uploads/comet/comet_PNG37.png);background-size: 160%; background-position:0px -12px;transform: rotate(50deg); position: absolute; left: 250px;top: 20px;">
-					
-				</p>
-			</div>
-		<div class="end" id="finish" style="transform: rotateZ(90deg); color :red; width: 100px;float: right; margin-top: 10px; ">
-			<h2 >Финиш!</h2>
-		</div>
-	</div>
+<body style="margin:0;padding:0;">
+	 		<div class="main_game" id="play" >
+	 		<div class="game_rools_off" id="rools" onclick="rools_Game_back()">
+	 			<h1>Правила простые:</h1>
+	 			<h2>Кушай сахар, играй по правилам и ты победишь!<h2>
+	 			<h2>Управление пострелкам либо("w","s","a","d")</h2>
+	 		</div>
+	 		<div class="game_rools_off" id="history" onclick=" history_Game_back()">
+	 			<h3>«Прятки» 
 
-	<div class="btn" style="width: 150px; height: 70px; margin:50px;margin-left: 40%; position: absolute;" onclick="(over())">
-
-		<input type="submit" id="up" name="" value="Вверх" onclick="(counter.up())" style="margin-left: 50px; width: 50px; height:50px" >
-			<br>
-		<input type="submit" id="left" name="" value="Влево" onclick="(counter.left())" style="float: left; width: 50px; height:50px ">
+— Девяносто девять, сто! Кто не спрятался, я не виноват! Я ненавижу водить, но для меня это гораздо легче, чем прятаться. Входя в темную комнату, я шепчу тем, кто затаился внутри: «Стукали-пали!». Они взглядом провожают меня по длинному коридору, и в висящих на стенах зеркалах отражается моя фигура в черной сутане и с косой в руках.</h3>
+	 		</div>	
+			<div class="main_game_slidebar" >
+				<h1 id="my_name" style="color:#a5760f;">Привет!</h1>
+				<div class="one"  onclick="start_Btn_Game()">Вперёд за сахаром!</div>
+				<div class="one" onclick="rools_Game()">Правила игры</div>
+				<div class="one" onclick="history_Game()">История</div>
+			</div>			
+		</div>
+<!-- --> 
+	<div class="flex_container_none" id="flex" >
 		
-		<input type="submit" id="right" name="" value="Вправо" onclick="(counter.right())" style="float: right; width: 50px; height:50px">
-		<br>
-		<br>
-		<input type="submit" id="down" name="" value="Вниз" onclick="(counter.down())" style="; width: 50px; height:50px; float: left;margin-top: 10px" >
+		<div class="flex_left" id="left" style=" display: flex; flex-direction: column; width: 15%; height:100vh; background-color: red; " >
+			<div class="up" id="up" onclick="(counter.up())" style="height:50%; background-image:url(https://w7.pngwing.com/pngs/466/953/png-transparent-arrow-symbol-up-arrow-blue-angle-text.png);background-size: 100%;background-position: center;">up</div>
+			<div class="down"id="down" onclick="(counter.down())" style="height:50% ;background-image:url(https://w7.pngwing.com/pngs/466/953/png-transparent-arrow-symbol-up-arrow-blue-angle-text.png);background-size:100% ;transform: rotate(180deg);background-position: center;">down</div>
+		</div>	
+
+			<div class="game" id="game" style=" width: 70%; height: 100vh; line-height: 100vh;">
+
+					<h1 id="sach" style="position: relative; ;background-image: url(https://i.imgur.com/e1zevgQ.png); background-position:1.5px -14px ; background-size: 100%; width: 50px;height: 50px; margin:0;padding: 0; border: solid 2px red " ></h1>
+
+					<p id="calo" style=";width: 20px; height: 20px;margin:0;padding:0; position: fixed; top: 10%; left:50%;"  >	</p>
+
+					<p id="calo" style=" ;width: 20px; height: 20px;margin:0;padding:0; position: fixed; top: 20%; left: 50%;" >	</p>
+
+					<p id="calo" style="width: 20px; height: 20px;margin:0;padding:0; position:fixed; top: 30%; left: 50%;" >	</p>
+
+					<p id="calo" style=";width: 20px; height: 20px;margin:0;padding:0; position:fixed; top: 40%; left: 50%;" >	</p>
+
+					<p id="calo" style="width: 20px; height: 20px;margin:0;padding:0; position: fixed; top: 50%; left: 50%;" >	</p>
+
+					<p id="calo" style="width: 20px; height: 20px;margin:0;padding:0; position: fixed; top: 60%; left: 50%" >	</p>
+
+					<p id="calo" style="width: 20px; height: 20px;margin:0;padding:0; position: fixed; top: 70%; left: 50%;" >	</p>
+
+					<p id="calo" style="width: 20px; height: 20px;margin:0;padding:0; position: fixed; top: 80%; left: 50%;" >	</p>
+
+			</div>
+
+		<div class="flex_right" style=" display: flex; flex-direction: column; width: 15%;height:100vh; background-color: red;">
+			<div class="right" id="right" onclick="(counter.right())" style=" background-image:url(https://png.pngtree.com/element_origin_min_pic/16/08/06/1957a5cc3e01cde.jpg);background-size:140% ;transform: rotate(0deg); height:50%;background-position: center">right </div>
+			<div class="left" id="left" onclick="(counter.left())" style="height:50%;background-image:url(https://png.pngtree.com/element_origin_min_pic/16/08/06/1957a5cc3e01cde.jpg);background-size:140% ;transform: rotate(180deg); height:50%;background-position: center; font-size: 2em;">left</div>
+		</div>
+
 	</div>
 </body>
 <script type="text/javascript" src="js.js"></script>
