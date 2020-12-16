@@ -1,233 +1,234 @@
-let poz_box = document.getElementById('sach');
-let poz_box_shit = document.getElementsByTagName('P')
-let win_flex = document.getElementById('flex');
-let win_left = document.getElementById('left');
-let win_game = document.getElementById('game');
-let win_rirht = document.getElementById('right');
-let my_name = document.getElementById('my_name')
-let r = (win_flex.clientWidth - win_left.clientWidth);
-let with_wind = document.documentElement.scrollWidth
-let btn_play = document.getElementById('play')
-let btn_rools = document.getElementById('rools')
-let btn_history = document.getElementById('history')
+$(document).ready(function () {
+    $(".col-sm-4").hover(function () {
+            // $(this).animate({
+            //   		  opacity: '0.3',
+            //   	});
+            let x = $(this).attr("id")
+            $(this).attr("id", "backgr_" + x)
 
-var danse = new Audio()
-danse.src = "gta.mp3";
-var danse_G = new Audio()
-danse_G.src = "kl.mp3";
-var svin = new Audio()
-svin.src = "skysh.mp3";
-var finvin = new Audio();
-finvin.src = "fin.mp3"
+            //	alert($(this).attr("id"))
+        },
+        function () {
+            // $(this).animate({
+            // 	backgroundColor:'red',
+            //     opacity: '1',
 
+            // });
+            let x = $(this).attr("id")
+            $(this).attr("id", (x.substr(7)))
+        });
 
+    $(".col-sm-4").click(function () {
+        let x = $(this).attr("id");
+        $(".desc_" + x.substr(7)).css("display", "block");
+        $(".description").slideToggle();
 
-
-
-function Counter() {
-  let count = 0;
-  let count_left = 0
-  
-  this.up = function() {
-    count-=20
-    //alert(count) 
-    poz_box.style.cssText+="top:" +(count)+"px;"
-    return count;
-  };
-  this.down = function() {
-    count+=20
-    //alert(count)
-    poz_box.style.cssText+="top:"+(count)+"px;"
-    return count;
-    
-  };
-
-  this.left = function() {
-  	count_left-=20
-    //alert(count)
-    poz_box.style.cssText+="left:"+(count_left)+"px;"
-    return count_left;
-  };
-  this.right = function() {
-  	count_left+=20
-    //alert(count)
-    poz_box.style.cssText+="left:"+(count_left)+"px;"
-    return count_left;
-  };
-}
-let value=60;
-
-function chet(){
-  let drop=10;
-  value+=drop;
-  return value
-}
-let value2 =8;
-function chet2(){
-  value2--;
-  return value2
-} ;
-
-setInterval(fun_repet,4000)
-function fun_repet(){
-  if (document.documentElement.scrollWidth
-<550) {
-    alert("У тебя узкий экран: "+document.documentElement.scrollWidth+"pc, поверни телефон что бы было удобнее! (или я буду надоедать)")
-  }
-  else return
-}
-
-///////////////////////////////////// начало игры
-//slideBar.className='mainOn';
-(function start_game(){
-  let aa = prompt('как тебя зовут?','Готовчиц')
-  alert ('привет '+aa+', а я голодный сыч, давай начнем игру ?')
-  my_name.innerHTML=aa+", залипай";
-  //win_flex.className='flex_container';
-  
-})()
-
-function start_Btn_Game(){
-  danse_G.play();
-  danse.pause ();
-  btn_play.className='main_game_of';
-  win_flex.className='flex_container';
-}
-
-function rools_Game(){
-  danse.play();
-  btn_rools.className ='game_rools';
-}
-function history_Game(){
-  danse.play();
-  btn_history.className ='game_history';
-}
-function rools_Game_back(){
-  btn_rools.className ='game_rools_back';
-}function history_Game_back(){
-  btn_history.className ='game_history_back';
-}
+////////// перемотка к след диву с блоками 
+        let top = $('#yak1').offset().top;
+        $('body,html').animate({scrollTop: top + 10}, 200);
+//////////
+        $("body").css("overflow-y", "hidden");
+        $(".off").slideToggle();
 
 
-/////////////////////////////////
-function fun_stop(){
-fun_Toclouse();
-over()
-for( let i=0; i<poz_box_shit.length; i++){
-  let left_P = poz_box.offsetLeft;
-  let top_P = poz_box.offsetTop;
-  let css = poz_box.style.cssTex;
-  let left_P_Shit = poz_box_shit[i].offsetLeft;
-  let top_P_Shit = poz_box_shit[i].offsetTop;
-  let sach_width = poz_box.clientWidth; 
-    if( ((left_P > left_P_Shit && left_P < left_P_Shit+20) && (top_P>top_P_Shit && top_P<top_P_Shit+20))||
-      ((left_P+sach_width > left_P_Shit && left_P+sach_width < left_P_Shit+20) && (top_P+sach_width>top_P_Shit && top_P+sach_width<top_P_Shit+20))||
-      ((left_P+sach_width > left_P_Shit && left_P< left_P_Shit+20) && (top_P+sach_width>top_P_Shit && top_P<top_P_Shit+20))
-      ){
-      let x = chet();
-      let y = chet2();
-      poz_box.style.cssText+="width:"+x+"px; height:"+x+"px";
-      poz_box_shit[i].style.cssText="display:none;"
-      if (y==0) {
-        danse_G.pause();
-        finvin.play();
-        alert("победа! больше не бегай по столу");
-        location.reload();
+    });
 
-      }else{
+    $(".off").click(function () {
 
-        danse_G.pause()
-        svin.play()
-        
-        alert("Осталось скушать: "+y);
-        danse_G.play()
-       }
-      }
-  }
-}
-
-function over(){
-
-  let left_P = poz_box.offsetLeft;
-  let top_P = poz_box.offsetTop;  
-    if (left_P<win_rirht.clientWidth){
-     //alert("соберись!");
-     counter.right();
-        //location.reload();
-    }else if(  left_P-win_rirht.clientWidth>win_game.clientWidth-poz_box.clientHeight ){
-    //alert("соберись!!");
-      counter.left();
-    }else if (top_P>(win_game.clientHeight-poz_box.clientHeight)){
-       counter.up()
-        //location.reload();
-    }else if(top_P<-1){
-      //alert("соберись!");
-      counter.down()
-       // location.reload();    
-    }
-}
+        for (let i = 0; i <= mass.length; i++) {
+            $(".desc_" + mass[i]).css("display", "none");
+        }
+        $("body").css("overflow-y", "");
+        $(".off").slideToggle();
+        $(".description").slideToggle();
+    })
 
 
+});
+/////flip cards btn_flip_second
+$(document).ready(function () {
+    $("#btn_flip_one").click(function () {
+
+       let back_card = document.getElementById("second_card")
+       let front_card = document.getElementById("first_card")
+        if (back_card.className== "back_card_one_Off" || back_card.className== "off_card" ){
+            back_card.className= "back_card_one"
+            front_card.className= "back_card_one_Off"
 
 
-////////////////////убегает 
+        }else{
+            front_card.className= "back_card_one"
+            back_card.className= "back_card_one_Off"
+        }
+    })
+    $("#btn_flip_second").click(function () {
 
-function fun_Toclouse(){
-
-for( let i=0; i<poz_box_shit.length; i++){
-  let left_P = poz_box.offsetLeft;
-  let top_P = poz_box.offsetTop;
-  let css = poz_box.style.cssTex;
-  let left_P_Shit = poz_box_shit[i].offsetLeft;
-  let top_P_Shit = poz_box_shit[i].offsetTop;
-  let sach_width = poz_box.clientWidth+100; 
-    if( ((left_P > left_P_Shit && left_P < left_P_Shit+150) && (top_P>top_P_Shit && top_P<top_P_Shit+150))||
-      ((left_P+sach_width > left_P_Shit && left_P+sach_width < left_P_Shit+150) && (top_P+sach_width>top_P_Shit && top_P+sach_width<top_P_Shit+150))||
-      ((left_P+sach_width > left_P_Shit && left_P< left_P_Shit+150) && (top_P+sach_width>top_P_Shit && top_P<top_P_Shit+150))
-      ){
-      setTimeout(function(){
-      poz_box_shit[i].style.cssText+="left:"+getRandomInt(win_left.clientWidth,win_left.clientWidth*4.5)+"px;";
-      poz_box_shit[i].style.cssText+="top:"+getRandomInt(5,100)+"%;";
-          },300)
-      }
-
-  }
-}
+       let back_card = document.getElementById("second_card_right")
+       let front_card = document.getElementById("first_card_right")
+        if (back_card.className== "back_card_one_Off" || back_card.className== "off_card"){
+            back_card.className= "back_card_one"
+            front_card.className= "back_card_one_Off"
 
 
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-/////////////////
-
-
-
-
-
-
-let counter = new Counter();
-
-win_flex.addEventListener("click", fun_stop ) 
-
-document.addEventListener("keydown", function(event) {
-
-    if (event.keyCode==37||event.keyCode==87) {
-          counter.up();
-    }
-    if (event.keyCode==40||event.keyCode==83) {
-          counter.down();
-    }
-    if (event.keyCode==65||event.keyCode==37) {
-          counter.left();
-    }
-    if (event.keyCode==39||event.keyCode==68) {
-          counter.right();
-    }
-
-    fun_Toclouse();
-    fun_stop();
-    over()
-
+        }else{
+            front_card.className= "back_card_one"
+            back_card.className= "back_card_one_Off"
+        }
+    })
 })
 
+////About me
 
+$(document).ready(function () {
+
+    $("#about").click(function () {
+
+        $(".card_of_me").animate({
+            width: 'toggle',
+            height: 'toggle',
+        });
+        $('#btn_off').click(function () {
+            $(".card_of_me").hide(500);
+        });
+    });
+
+
+    $("#zhen").children("span").hover(function () {
+            $(this).css("position", "relative")
+            $(this).animate({
+                opacity: '0.5',
+                top: '-15px',
+            }, 300);
+        },
+
+        function () {
+            $(this).animate({
+                opacity: '1',
+                top: '0px',
+
+            }, 300)
+
+        });
+
+
+});
+
+$("#cursor_shot").hover(function () {
+
+        $("#cursor_shot").mousemove(function (event) {
+            var x, y;
+            $(".cursor").css('display', 'block')
+            $(".cursor2").css('display', 'block')
+            $(".cursor3").css('display', 'block')
+            $(".cursor4").css('display', 'block')
+            $(".cursor5").css('display', 'block')
+            $(".cursor6").css('display', 'block')
+            $(".cursor7").css('display', 'block')
+            x = event.clientX;
+            y = event.clientY;
+            $(".cursor").css('left', function () {
+                return x - 5;
+            });
+            $(".cursor").css('top', function () {
+
+                return y - 5;
+            });
+            for (let i = 2; i <= 7; i++) {
+                setTimeout(function () {
+                    $(".cursor" + i).css('left', function () {
+                        return x - 2;
+                    });
+                    $(".cursor" + i).css('top', function () {
+
+                        return y - 5;
+                    });
+                }, (i * 50))
+            }
+// setTimeout(function() {
+// $( ".cursor2" ).css( 'left', function( ) {
+//       return x-2;
+// });
+// $( ".cursor2" ).css( 'top', function() {
+
+//   return y-5;
+// });	
+// },100)
+
+
+        });
+    },
+    function () {
+        $(".cursor").css('display', 'none')
+        $(".cursor2").css('display', 'none')
+        $(".cursor3").css('display', 'none')
+        $(".cursor4").css('display', 'none')
+        $(".cursor5").css('display', 'none')
+        $(".cursor6").css('display', 'none')
+        $(".cursor7").css('display', 'none')
+
+    });
+
+
+let mass = ['one', "two", "tree", "four", "five", "six"]
+
+
+let arr = document.getElementsByClassName('col-sm-4')
+
+let btn_descr = document.getElementById('btn_descr')
+btn_descr.addEventListener('click', animateTextOn);
+
+function animateTextOn() {
+    let x = "There was once a baby crocodile. He had a beautiful shiny tail. All the other crocodiles were jealous of him." +
+        "One day the little baby crocodile counted all his beautiful shiny scales and there were a thousand. A lot more than he thought." +
+        "He counted all the other crocodiles and there were twenty. He decided that he had many scales and could spare forty from his tummy." +
+        "He wished for forty of his scales to be on his pillow by morning, but there weren’t any. Even three weeks later there weren’t any" +
+        "Then one day a magic crocodile granted him a wish. He wished for forty of his scales to be on his pillow." +
+        "He woke up. There were forty beautiful shiny scales on his pillow! He gave all twenty crocodiles, two scales each. From then on everybody was kind to the little baby crocodile."
+
+
+
+    animateText("fast", x, 0);
+}
+
+/////////// спаны в каждую букву
+let arch = document.getElementById('archit');
+let mass_arch = "!Architectural visualization"
+
+for (let i = 1; i < mass_arch.length; i++) {
+    arch.innerHTML += "<span>" + mass_arch[i] + "</span>";
+}
+
+/////////
+
+function animateText(id, text, i) {
+    document.getElementById(id).innerHTML = text.substring(0, i);
+    i++;
+    if (i > text.length) return;
+    setTimeout("animateText('" + id + "','" + text + "'," + i + ")", 10);
+}
+
+(function () {
+    $("#zhen").children("span").css("position", "relative")
+    $("#zhen").children("span").animate({
+
+        opacity: '0.5',
+        top: '-10px',
+    }, 100)
+    $("#zhen").children("span").animate({
+        opacity: '1',
+        top: '0px',
+    }, 1000)
+
+
+})()
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+
+//alert(arr.length);
+
+// btnOn.addEventListener('click', blockOn);
+
+// document.addEventListerner('onmouse',back_gr)

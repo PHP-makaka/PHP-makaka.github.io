@@ -1,192 +1,405 @@
-#calo{
-	background-image: url(https://export.by/images/uploads/2017/03/14/40065-1489485734.png);
-	background-size: 90%;
-    background-position: 55px 47px;
-}	
 
-.up:hover,.down:hover,.right:hover, .left:hover{
-	transition-duration: 0.5s;
-	border-radius: 20%;
-	background-color: green;
-}
-.flex_container_none{
-	display: none;
-}
-.flex_container{
-	background-image: url(https://image.freepik.com/free-photo/_164357-194.jpg);
-	background-size: 100%;
-	background-color: grey;
-	width: 100%;height:100vh; 
-	display: flex; 
-	justify-content: center; 
-	text-align: center; 
-	line-height: 50vh; 
+#my_jum {
+    font-family: Snell Roundhand, Monotype Corsiva;
+    font-size: 1.1em;
 }
 
+#zhen:hover {
+    cursor: pointer;
+
+}
+.row {
+    height: 100%;
+    display: flex;
+    z-index: 1;
+}
+
+.col-sm-4 {
+    padding: 15%;
+    background-size: 100%;
+}
+
+.col-sm-12 {
+    padding: -15%;
+    width: 100%;
+    background-color: green;
+}
+
+.cursor {
+    width: 15px;
+    height: 15px;
+    position: fixed;
+    background-color: #7e7f80;
+    border-radius: 50%;
+    z-index: 2;
+    display: none;
+}
+
+.cursor2 {
+    width: 13px;
+    height: 13px;
+    position: fixed;
+    background-color: #7e7f80;
+    border-radius: 50%;
+    z-index: 2;
+    display: none;
+}
+
+.cursor3 {
+    width: 10px;
+    height: 10px;
+    position: fixed;
+    background-color: #7e7f80;
+    border-radius: 50%;
+    z-index: 2;
+    display: none;
+}
+
+.cursor4 {
+    width: 7px;
+    height: 7px;
+    position: fixed;
+    background-color: #7e7f80;
+    border-radius: 50%;
+    z-index: 2;
+    display: none;
+}
+
+.cursor5 {
+    width: 5px;
+    height: 5px;
+    position: fixed;
+    background-color: #7e7f80;
+    border-radius: 50%;
+    z-index: 2;
+    display: none;
+}
+
+.cursor6 {
+    width: 4px;
+    height: 4px;
+    position: fixed;
+    background-color: #7e7f80;
+    border-radius: 50%;
+    z-index: 2;
+    display: none;
+}
+
+.cursor7 {
+    width: 2px;
+    height: 2px;
+    position: fixed;
+    background-color: #7e7f80;
+    border-radius: 50%;
+    z-index: 2;
+    display: none;
+}
+
+.description {
+    margin: 0;
+    padding: 0;
+    margin-left: 32.5%;
+    height: 100%;
+    width: 68%;
+    background-color: #e9ecef;
+    position: fixed;
+    z-index: 1;
+    display: none;
+}
+
+.none {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.off {
+    position: fixed;
+    z-index: 1;
+    width: 33%;
+    height: 100%;
+    background-color: grey;
+    margin: auto;
+    padding: auto;
+    opacity: 0.2;
+    display: none;
+
+}
+
+.off:hover {
+    opacity: 0.3;
+    cursor: crosshair;
+}
+
+.card_of_me {
+    display: none;
+}
+
+#about {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+#about:hover {
+    font-size: 1.03em;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+img {
+    margin: auto;
+    padding: auto;
+    width: 100%;
+    height: 60%;
+    border-radius: 2%;
+}
+
+.carousel-inner {
+    margin: auto;
+    padding: auto;
+}
+
+.card-img-top {
+    height: 30%;
+    width: auto;
+}
 
 @keyframes slidein {
-  from 0%{
-    background-position: 0px 0px; 
-  }
-  50%{
-  	background-position: 10000px 10000px;
-  }
+    from {
+        opacity: 0;
+        background-size: 150%;
 
-  to 100%{
-  	background-position: 0px;
+    }
+
+    to {
+        opacity: 1;
+        background-size: 100%;
     }
 }
-.main_game{
-  	animation-name: slidein;
-	animation-duration: 600s;
-	margin: auto;
-	padding: auto; 
-	background-image:url(https://i.imgur.com/e1zevgQ.png);
-	background-size: 10%;
-	width: 100%;
-	height: 100vh;
-	background-color: grey;
-}
-.main_game_of{
-	display: none;
-}
 
-.main_game_slidebar:hover{
-	animation-name: slidein;
-	animation-duration: 300s;
-	background-image: url(https://export.by/images/uploads/2017/03/14/40065-1489485734.png);
-	background-size: 20%;
-    background-position: 55px 47px;
+@keyframes slideinOff {
+    from {
+        opacity: 0.5;
+        background-size: 150%;
 
-}
-.main_game_slidebar{
+    }
 
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	padding: auto;
-	box-shadow:inset 0px 0px 20px 20px rgb(0 0 0);
-	border-radius: 5%;
-	width: 50%;
-	height: 100vh;
-	background-color: #000000ad;
-	text-align: center;
-
-}
-
-.one{
-	border-radius: 30px;
-	font-size: 2em;
-	text-align: center;
-	margin: auto;
-	padding: 3.5vh;
-	width: 70%;
-	height:auto;
-	background-color: #84849a;
-}
-.one:hover{
-	background-color: #6ae6caad;
-	cursor: default;
-}
-
-@keyframes left_slide {
-  from {
-    left: -95%; 
-  }
-
-  to {
-  	left:0%;
+    to {
+        opacity: 1;
+        background-size: 100%;
     }
 }
-@keyframes left_slide_back {
-  from {
-    left: 0%; 
-  }
 
-  to {
-  	left:-100%;
+#one {
+    animation-duration: 1s;
+    animation-name: slideinOff;
+    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1dqjpar79itl1ck11i3d1l40ut3.jpg)
+
+}
+
+#backgr_one {
+
+    animation-duration: 1s;
+    animation-name: slidein;
+    background-image: url(https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/2fee2366134da099c897197becd054e8465b4bcec0400fd56ea6bfa8934c620b.jpg);
+}
+
+#two {
+    animation-duration: 1s;
+    animation-name: slideinOff;
+    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1cuh0j5u76tpup7fekmnccd95.jpg);
+}
+
+#backgr_two {
+    animation-duration: 1s;
+    animation-name: slidein;
+    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1cv3d2g6b5cc13vd11n9ek31i1a6.jpg)
+}
+
+#tree {
+    animation-duration: 1s;
+    animation-name: slidein;
+    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1db0i4n8g58dht0df82hkri44.jpg)
+}
+
+#backgr_tree {
+    animation-duration: 1s;
+    animation-name: slideinOff;
+    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1cuh5tqnl8pi989facbct1f2c3.jpg)
+}
+
+#four {
+    animation-duration: 1s;
+    animation-name: slidein;
+    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1cv3d2g6b5cc13vd11n9ek31i1a6.jpg)
+}
+
+#backgr_four {
+    animation-duration: 1s;
+    animation-name: slideinOff;
+    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1bjkb48fk1gs39t136u81210tr3.jpg)
+}
+
+#five {
+    animation-duration: 1s;
+    animation-name: slidein;
+    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1cumgfdnmjmg1v31uf3ovrdfr3.jpg)
+}
+
+#backgr_five {
+    animation-duration: 1s;
+    animation-name: slideinOff;
+    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1cv3431m81goq1rhq111d18ngosd7.jpg)
+}
+
+#six {
+    animation-duration: 1s;
+    animation-name: slidein;
+    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1bj82spvdtnq19751mvddnd1t0g9.jpg)
+}
+
+#backgr_six {
+    animation-duration: 1s;
+    animation-name: slideinOff;
+    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1bj2pp0aio3hr26lqvj771e3s5.jpg)
+}
+
+.desc_one {
+    display: none;
+}
+
+.desc_two {
+    background-color: grey;
+    display: none;
+}
+
+.desc_tree {
+    background-color: black;
+    display: none;
+}
+
+.desc_four {
+    background-color: yellow;
+    display: none;
+}
+
+.desc_five {
+    background-color: yellow;
+    display: none;
+}
+
+.desc_six {
+    background-color: yellow;
+    display: none;
+}
+@keyframes transform_to_besin {
+    from{
+
+        transform: rotateY(-180deg);
+    }
+    to{
+        transform: rotateY(-360deg);
+
+    }
+
+}
+@keyframes transform_to_Off {
+    from{
+        transform: rotateY(0deg);
+
+    }
+    to{
+        transform: rotateY(180deg);
+
+    }
+
+}
+
+.back_card_one{
+    animation-duration: 1s;
+    animation-name: transform_to_besin;
+    transform-style: preserve-3d;
+    position: relative;
+    z-index: 1;
+
+}
+.off_card{
+    display: none;
+}
+.back_card_one_Off{
+    animation-duration: 1s;
+    animation-name: transform_to_Off;
+    transform-style: preserve-3d;
+    position: fixed;
+    z-index: 1;
+
+    backface-visibility: hidden;
+    /*display: 1none;*/
+
+}
+
+front_card_one{
+    animation-duration: 1s;
+    animation-name: transform_to_besin;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+@keyframes about {
+    0%{
+       color: black;
+    }
+    50%{
+        color:#8e0101c7;
+    }
+    100%{
+        color: black;
+    }
+
+}
+#about{
+    animation-duration: 3s;
+    animation-name: about;
+    animation-iteration-count:infinite;
+}
+@keyframes about_my {
+    0% {
+      left:0px;
+
+    }
+    50%{
+        left:-2px;
+
+    }
+    100% {
+        left:0px;
+
     }
 }
-.game_rools_off{
-	display: none;
-}
-.game_rools_back{
-	animation-name: left_slide_back;
-	animation-duration: 1.5s;
-	text-align: center;
-	animation-duration: 1.5s;
-	position: fixed;
-	width: 25%;
-	height: 100vh;
-	border-radius: 5%;
-	left: -50%;
-	box-shadow:inset -18px 15px 19px 0px rgb(175 166 166 / 50%);
-	background-color: #000000ad;
-	color:#e1dfff;
-}
-.game_rools{
-	animation-name: left_slide;
-	text-align: center;
-	animation-duration: 1s;
-	position: fixed;
-	width: 25%;
-	height: 100vh;
-	border-radius: 5%;
-	box-shadow:inset -18px 15px 19px 0px rgb(175 166 166 / 50%);
-	background-color: #000000ad;
-	color:#e1dfff;
-}
-.game_rools:hover{
-	background-color: #748e9ac9;
-}
-
-.game_history{
-	animation-name: right_slide;
-	text-align: center;
-	animation-duration: 1s;
-	position: fixed;
-	width: 25%;
-	height: 100vh;
-	border-radius: 5%;
-	float: right;
-	box-shadow:inset -18px 15px 19px 0px rgb(175 166 166 / 50%);
-	background-color: #000000ad;
-	color:#e1dfff;
-	left:75%;
-}
-.game_history_back{
-	animation-name: right_slide_back;
-	text-align: center;
-	animation-duration: 2s;
-	position: fixed;
-	width: 25%;
-	height: 100vh;
-	border-radius: 5%;
-	float: right;
-	box-shadow:inset -18px 15px 19px 0px rgb(175 166 166 / 50%);
-	background-color: #000000ad;
-	color:#e1dfff;
-	left:150%;
+#name_m{
+    transform-style: preserve-3d;
+    transform: rotate(20deg);
+    color:#8a2a2bcf;
+    animation-duration: 1.5s;
+    animation-name: about_my;
+    animation-iteration-count:infinite;
 
 }
-.game_history:hover{
-	background-color: #748e9ac9;
+#panel, #flip {
+    background-color:#adadad;
+    border-radius: 20px 20px 0 0 ;
+    cursor: pointer;
+    position: relative;
+    z-index: 10000;
+    padding: 5px;
+    text-align: center;
 }
-@keyframes right_slide {
-  from {
-    left:100%; 
-  }
 
-  to {
-  	left:75%;
-    }
-}
-@keyframes right_slide_back {
-  from {
-    left:75%; 
-  }
-
-  to {
-  	left:150%;
-    }
+#panel {
+    border-radius: 0 0 20px 20px;
+    padding: 5%;
+    display: none;
 }
