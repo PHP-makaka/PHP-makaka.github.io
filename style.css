@@ -1,405 +1,994 @@
-
-#my_jum {
-    font-family: Snell Roundhand, Monotype Corsiva;
-    font-size: 1.1em;
+body {
+    margin: 0;
+    padding: 0;
+    height: 7218px;
+    /*background-color: #E5E5E5;;*/
 }
 
-#zhen:hover {
-    cursor: pointer;
-
+.mainP {
+    background-image: url("./img/Group 40 1.png");
+    width: 480px;
+    height: 742px;
 }
-.row {
-    height: 100%;
-    display: flex;
+
+.mainP h1 {
+    padding: 0;
+    padding-top: 10px;
+    margin: 0;
+    top: 15px;
+    text-align: center;
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 38px;
+    text-transform: uppercase;
+    text-shadow: 0px 4px 4px #000000;
+    color: #FFFFFF;
+}
+
+.price {
+    position: absolute;
+    width: 115.03px;
+    height: 46.23px;
+    left: 335.75px;
+    top: 132.66px;
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48.3759px;
+    line-height: 46px;
+    color: #FF0000;
+    text-shadow: 0px 1.78194px 1.78194px #000000;
+}
+
+.priceSale {
+    position: absolute;
+    width: 98.9px;
+    height: 25.8px;
+    left: 334.68px;
+    top: 171.36px;
+    font-family: " Gotham Pro";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26.8755px;
+    line-height: 26px;
+    color: #FF0000;
+    text-shadow: 0px 1.78194px 1.78194px #000000;
+}
+
+.newYer {
+    position: absolute;
+    width: 150.76px;
+    height: 29.6px;
+    left: 71.47px;
+    top: 679.3px;
+    font-family: " Gotham Pro";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 13.8735px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 0px 3.6996px 3.6996px rgba(0, 0, 0, 0.25);
+}
+
+.simplprice {
+    position: absolute;
+    width: 240px;
+    height: 77px;
+    left: 0px;
+    top: 740px;
     z-index: 1;
+    background: #BFBEBE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.41)
 }
 
-.col-sm-4 {
-    padding: 15%;
+.saleSimple {
+    position: absolute;
+    width: 91px;
+    height: 94px;
+    left: 197px;
+    top: 732px;
+    z-index: 2;
+    background: #DF1C01;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.58);
+    border-radius: 5px;
+}
+
+.newPrise {
+    position: absolute;
+    width: 240px;
+    height: 77px;
+    left: 240px;
+    top: 740px;
+    z-index: 1;
+    background: #FAFF00;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.31);
+}
+
+.simplpriceTex {
+    position: absolute;
+    width: 183px;
+    height: 30px;
+    left: 8px;
+    top: 5px;
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    text-align: center;
+    color: #000000;
+}
+
+.simplpricePrice {
+    position: absolute;
+    width: 151px;
+    height: 40px;
+    left: 16px;
+    top: 35px;
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 33.7427px;
+    line-height: 118.7%;
+    /* identical to box height, or 40px */
+    text-align: center;
+    color: #000000;
+
+}
+
+.saleSimpleText {
+    position: absolute;
+    width: 88px;
+    height: 21px;
+    left: 2px;
+    top: 15px;
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 96.7%;
+    /* or 21px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.77);
+}
+.saleSimpleNum{
+    position: absolute;
+    width: 79px;
+    height: 39px;
+    left:6px;
+    top: 43px;
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 96.7%;
+    /* identical to box height, or 39px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.77);
+}
+.newPriceText{
+    position: absolute;
+    width: 156px;
+    height: 32px;
+    left: 65px;
+    top: 2px;
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 118.7%;
+    /* identical to box height, or 32px */
+
+    text-align: center;
+
+    color: #000000;
+}
+.newPriceNum{
+
+    position: absolute;
+    width: 78px;
+    height: 56px;
+    left: 75px;
+    top: 28px;
+    font-family: "Circe";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 47.6541px;
+    line-height: 118.7%;
+    text-align: center;
+    color: #000000;
+
+}
+.newPriceNumP{
+    position: absolute;
+    left: 152.58px;
+    top: 52.54px;
+}
+.newPriceNumK{
+    position: absolute;
+    left: 163.07px;
+    top: 35.05px;
+
+    font-family: Circe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 118.7%;
+    /* or 26px */
+
+    text-align: center;
+
+    color: #000000;
+}
+.btnRed{
+    position: absolute;
+    width: 457px;
+    height: 83px;
+    left: 16px;
+    top: 853px;
+    background: linear-gradient(180deg, #FF0000 0%, #470000 96.87%);
+    box-shadow: 0px 22px 44px -12px rgba(255, 37, 0, 0.86);
+    border-radius: 100px;
+}
+.mainP2{
+    background-image: url("./img/Group 42 1.png");
     background-size: 100%;
+    position: absolute;
+    width: 480px;
+    height: 1181px;
+    top: 995px;
+}
+.mainP2Text{
+    position: absolute;
+    width: 407px;
+    height: 38px;
+    left: 34px;
+    top: 27px;
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: #E7E7E7;
+    text-shadow: #000000 1.5px 1.5px 1.5px;
+}
+.btnRedText{
+    position: absolute;
+    width: 385.01px;
+    height: 31px;
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 31px;
+    /* identical to box height */
+    top: 26px;
+    left: 36.63px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px #000000;
+}
+.mainP2Desc1{
+    position: absolute;
+    width: 329px;
+    height: 38px;
+    left: 150px;
+    top: 412px;
+
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #000000;
+}
+.descZh{
+    font-weight: bold;
+}
+.mainP2Desc2{
+    position: absolute;
+    width: 489px;
+    height: 19px;
+    left: -10px;
+    top: 691px;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #000000;
+}
+.mainP2Desc3{
+    position: absolute;
+    width: 441px;
+    height: 19px;
+    left: 36px;
+    top: 1118px;
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
+}
+.btnRed2{
+    position: absolute;
+    width: 457px;
+    height: 83px;
+    left: 16px;
+    top: 2183px;
+    background: linear-gradient(180deg, #FF0000 0%, #470000 96.87%);
+    box-shadow: 0px 22px 44px -12px rgba(255, 37, 0, 0.86);
+    border-radius: 100px;
+}
+.mainP3{
+    position: absolute;
+    width: 480px;
+    height: 1500px;
+    top:2320px;
+    background: url("./img/Group 44 1.png");
+}
+.mainP3Text1{
+    text-shadow: #000000 1.5px 1.5px 1.5px;
+    position: absolute;
+    width: 431px;
+    height: 38px;
+    left: 33px;
+    top: 23px;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 38px;
+    text-transform: uppercase;
+
+    color: #E7E7E7;
+
+}
+.descMainP3{
+    position: absolute;
+    width: 420px;
+    height: 224px;
+    left: 41px;
+    top: 100px;
+}
+.deckP3Col1{
+    position: absolute;
+    width: 95px;
+    height: 19px;
+    left: 15px;
+    top: 34px;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 19px;
+
+    color: #000000;
+}
+.deskP3Col11{
+    position: absolute;
+    width: 52px;
+    height: 19px;
+    left: 15px;
+    top: 69px;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 19px;
+    color: #000000;
+
+}
+.deskP3Col12{
+    position: absolute;
+    width: 102px;
+    height: 19px;
+    left: 15px;
+    top: 104px;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 19px;
+    color: #000000;
+}
+.deckP3ColR1{
+    position: absolute;
+    width: 128px;
+    height: 19px;
+    left: 132px;
+    top: 34px;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 19px;
+
+    color: #000000;
+}
+.deskP3ColR11{
+    position: absolute;
+    width: 269px;
+    height: 19px;
+    left: 132px;
+    top: 69px;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 19px;
+
+    color: #000000;
+
+}
+.deckP3ColR12{
+    position: absolute;
+    width: 259px;
+    height: 119px;
+    left:132px;
+    top: 105px;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 19px;
+
+    color: #000000;
+
+}
+.btnRed3{
+    position: absolute;
+    width: 457px;
+    height: 83px;
+    left: 16px;
+    top: 3837px;
+    background: linear-gradient(180deg, #FF0000 0%, #470000 96.87%);
+    box-shadow: 0px 22px 44px -12px rgba(255, 37, 0, 0.86);
+    border-radius: 100px;
+}
+.samePageBye{
+    position: absolute;
+    width: 477px;
+    height: 84px;
+    top:3971px;
+    left: 3px;
+    background-image: url("./img/Group 3 10.png");
+}
+.samePageByeText{
+    text-shadow: #000000 1.5px 1.5px 1.5px;
+    position: absolute;
+    width: ;
+    height: 38px;
+    left: 24px;
+    top: 29px;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 38px;
+    text-transform: uppercase;
+
+    color: #E7E7E7;
+
 }
 
-.col-sm-12 {
-    padding: -15%;
-    width: 100%;
-    background-color: green;
-}
+.samePageOne{
+    left: 10px;
 
-.cursor {
-    width: 15px;
-    height: 15px;
-    position: fixed;
-    background-color: #7e7f80;
-    border-radius: 50%;
-    z-index: 2;
-    display: none;
+    position: absolute;
+    width: 473px;
+    height: 739px;
+    top:4078px;
+    background: url("./img/Group 45 1.png");
 }
+.samePageOneT2{
+    position: absolute;
+    width: 243px;
+    height: 36px;
+    left: 10px;
+    top: 37px;
 
-.cursor2 {
-    width: 13px;
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 118.7%;
+    /* identical to box height, or 36px */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+.samePageOneT1{
+    position: absolute;
+    width: 238px;
+    height: 25px;
+    left: 216px;
+    top: 11px;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 115.2%;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000000;
+
+}
+.samePageDeskOldPrise1{
+    position: absolute;
+    width: 113px;
     height: 13px;
-    position: fixed;
-    background-color: #7e7f80;
-    border-radius: 50%;
-    z-index: 2;
-    display: none;
+    left: 30px;
+    top: 603px;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 118.7%;
+    /* or 18px */
+
+    text-align: center;
+
+    color: #000000;
 }
 
-.cursor3 {
-    width: 10px;
-    height: 10px;
-    position: fixed;
-    background-color: #7e7f80;
-    border-radius: 50%;
-    z-index: 2;
-    display: none;
-}
+.samePageDeskOldPrise2{
+    position: absolute;
+    width: 91px;
+    height: 15.34px;
+    left: 141px;
+    top: 605px;
 
-.cursor4 {
-    width: 7px;
-    height: 7px;
-    position: fixed;
-    background-color: #7e7f80;
-    border-radius: 50%;
-    z-index: 2;
-    display: none;
-}
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 15px;
+    /* identical to box height */
 
-.cursor5 {
-    width: 5px;
-    height: 5px;
-    position: fixed;
-    background-color: #7e7f80;
-    border-radius: 50%;
-    z-index: 2;
-    display: none;
-}
+    text-align: center;
 
-.cursor6 {
-    width: 4px;
-    height: 4px;
-    position: fixed;
-    background-color: #7e7f80;
-    border-radius: 50%;
-    z-index: 2;
-    display: none;
+    color: #000000;
 }
+hr{
+    position: absolute;
+    width: 179px;
+    height: 0px;
+    left: 34px;
+    top: 625px;
 
-.cursor7 {
-    width: 2px;
-    height: 2px;
-    position: fixed;
-    background-color: #7e7f80;
-    border-radius: 50%;
-    z-index: 2;
-    display: none;
+    border: 1.01474px solid #000000;
+    transform: rotate(180deg);
 }
+.textDesc{
+    position: absolute;
+    width: 192px;
+    height: 13px;
+    left: 15px;
+    top: 563px;
 
-.description {
-    margin: 0;
-    padding: 0;
-    margin-left: 32.5%;
-    height: 100%;
-    width: 68%;
-    background-color: #e9ecef;
-    position: fixed;
-    z-index: 1;
-    display: none;
-}
-
-.none {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-}
-
-.off {
-    position: fixed;
-    z-index: 1;
-    width: 33%;
-    height: 100%;
-    background-color: grey;
-    margin: auto;
-    padding: auto;
-    opacity: 0.2;
-    display: none;
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 118.7%;
+    color: #000000;
 
 }
+.samePageDeckNewPrice1{
+    position: absolute;
+    width: 162.18px;
+    height: 31.86px;
+    left: 279.25px;
+    top: 611px;
 
-.off:hover {
-    opacity: 0.3;
-    cursor: crosshair;
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 118.7%;
+    /* or 30px */
+
+    text-align: center;
+
+    color: #000000;
+}
+.samePageDeckNewPrice100{
+    position: absolute;
+    width: 111px;
+    height: 80px;
+    left: 269px;
+    top: 640px;
+
+    font-family: Circe;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 68.0774px;
+    line-height: 118.7%;
+    /* or 81px */
+
+    text-align: center;
+
+    color: #000000;
+}
+.p{
+    position: absolute;
+    width: 13.62px;
+    height: 28.25px;
+    left: 379.26px;
+    top: 674.85px;
+
+    font-family: Circe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23.8271px;
+    line-height: 118.7%;
+    /* identical to box height, or 28px */
+
+    text-align: center;
+
+    color: #000000;
+}
+.upPrice{
+    position: absolute;
+    width: 39.48px;
+    height: 41.53px;
+    left: 394.24px;
+    top: 649.86px;
+
+    font-family: Circe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 31.4286px;
+    line-height: 118.7%;
+    /* or 37px */
+
+    text-align: center;
+
+    color: #000000;
+}
+.btnRed4{
+    position: absolute;
+    width: 229px;
+    height: 58.35px;
+    left: 14px;
+    top: 650px;
+
+    background: linear-gradient(180deg, #FF0000 0%, #820000 100%);
+    box-shadow: 0px 4.40385px 4.40385px rgba(0, 0, 0, 0.44);
+    border-radius: 110.096px;
+}
+.btnRed4by{
+    position: absolute;
+    width: 143.12px;
+    height: 38.53px;
+    left: 45.14px;
+    top: 12.11px;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 33.0288px;
+    line-height: 115.2%;
+    /* or 38px */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4.40385px 4.40385px rgba(0, 0, 0, 0.78);
 }
 
-.card_of_me {
-    display: none;
+.samePageTwo{
+    position: absolute;
+    width: 473px;
+    height:739px;
+    left: 10px;
+    top:4834px;
+    background: url("./img/Group 46 1.png") no-repeat;
+}
+.samePageOneT1S{
+    position: absolute;
+    width: 238px;
+    height: 25px;
+    left: 216px;
+    top: 11px;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 115.2%;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+.commentsMain{
+    position: absolute;
+    width: 477px;
+    height: 84px;
+    top:5599px;
+    left: 3px;
+    background-image: url("./img/Group 3 10.png");
 }
 
-#about {
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin: 0;
-}
 
-#about:hover {
-    font-size: 1.03em;
-    opacity: 0.5;
-    cursor: pointer;
-}
+.commentsMainT{
+    text-shadow: #000000 1.5px 1.5px 1.5px;
+    position: absolute;
+    width: 450px;
+    height: 38px;
+    left: 24px;
+    top: 29px;
 
-img {
-    margin: auto;
-    padding: auto;
-    width: 100%;
-    height: 60%;
-    border-radius: 2%;
-}
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 38px;
+    text-transform: uppercase;
 
-.carousel-inner {
-    margin: auto;
-    padding: auto;
-}
-
-.card-img-top {
-    height: 30%;
-    width: auto;
-}
-
-@keyframes slidein {
-    from {
-        opacity: 0;
-        background-size: 150%;
-
-    }
-
-    to {
-        opacity: 1;
-        background-size: 100%;
-    }
-}
-
-@keyframes slideinOff {
-    from {
-        opacity: 0.5;
-        background-size: 150%;
-
-    }
-
-    to {
-        opacity: 1;
-        background-size: 100%;
-    }
-}
-
-#one {
-    animation-duration: 1s;
-    animation-name: slideinOff;
-    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1dqjpar79itl1ck11i3d1l40ut3.jpg)
+    color: #E7E7E7;
 
 }
-
-#backgr_one {
-
-    animation-duration: 1s;
-    animation-name: slidein;
-    background-image: url(https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/2fee2366134da099c897197becd054e8465b4bcec0400fd56ea6bfa8934c620b.jpg);
+.grup30{
+    position: absolute;
+    width: 442px;
+    height: 404px;
+    top: 5709px;
 }
-
-#two {
-    animation-duration: 1s;
-    animation-name: slideinOff;
-    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1cuh0j5u76tpup7fekmnccd95.jpg);
+.grup30 img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 21px;
+    top: 1px;
 }
+.NameCom{
+    position: absolute;
+    width: 230px;
+    height: 29px;
+    left: 102px;
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24.1266px;
+    line-height: 121%;
+    /* or 29px */
 
-#backgr_two {
-    animation-duration: 1s;
-    animation-name: slidein;
-    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1cv3d2g6b5cc13vd11n9ek31i1a6.jpg)
-}
 
-#tree {
-    animation-duration: 1s;
-    animation-name: slidein;
-    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1db0i4n8g58dht0df82hkri44.jpg)
-}
-
-#backgr_tree {
-    animation-duration: 1s;
-    animation-name: slideinOff;
-    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1cuh5tqnl8pi989facbct1f2c3.jpg)
-}
-
-#four {
-    animation-duration: 1s;
-    animation-name: slidein;
-    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1cv3d2g6b5cc13vd11n9ek31i1a6.jpg)
-}
-
-#backgr_four {
-    animation-duration: 1s;
-    animation-name: slideinOff;
-    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1bjkb48fk1gs39t136u81210tr3.jpg)
-}
-
-#five {
-    animation-duration: 1s;
-    animation-name: slidein;
-    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1cumgfdnmjmg1v31uf3ovrdfr3.jpg)
-}
-
-#backgr_five {
-    animation-duration: 1s;
-    animation-name: slideinOff;
-    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1cv3431m81goq1rhq111d18ngosd7.jpg)
-}
-
-#six {
-    animation-duration: 1s;
-    animation-name: slidein;
-    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1bj82spvdtnq19751mvddnd1t0g9.jpg)
-}
-
-#backgr_six {
-    animation-duration: 1s;
-    animation-name: slideinOff;
-    background-image: url(https://dunked.cdn.speedyrails.net/assets/prod/120709/600x600-2_p1bj2pp0aio3hr26lqvj771e3s5.jpg)
-}
-
-.desc_one {
-    display: none;
-}
-
-.desc_two {
-    background-color: grey;
-    display: none;
-}
-
-.desc_tree {
-    background-color: black;
-    display: none;
-}
-
-.desc_four {
-    background-color: yellow;
-    display: none;
-}
-
-.desc_five {
-    background-color: yellow;
-    display: none;
-}
-
-.desc_six {
-    background-color: yellow;
-    display: none;
-}
-@keyframes transform_to_besin {
-    from{
-
-        transform: rotateY(-180deg);
-    }
-    to{
-        transform: rotateY(-360deg);
-
-    }
+    color: #000000;
 
 }
-@keyframes transform_to_Off {
-    from{
-        transform: rotateY(0deg);
+.ageCom{
+    position: absolute;
+    width: 100px;
+    height: 23px;
+    top: 27px;
+    left: 102px;
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19.3013px;
+    line-height: 121%;
+    color: #000000;
+}
+.stars1{
+    position: absolute;
+    left: 347px;
+    width: 17px;
+    height: 17px;
+    background-image: url("./img/Star 1.png");
+}
+.stars2{
+    position: absolute;
+    left: 368px;
+    width: 17px;
+    height: 17px;
+    background-image: url("./img/Star 1.png");
+}
+.stars3{
+    position: absolute;
+    left: 389px;
+    width: 17px;
+    height: 17px;
+    background-image: url("./img/Star 1.png");
+}
+.stars4{
+    position: absolute;
+    left: 410px;
+    width: 17px;
+    height: 17px;
+    background-image: url("./img/Star 1.png");
+}
+.stars5{
+    position: absolute;
+    left: 431px;
+    width: 17px;
+    height: 17px;
+    background-image: url("./img/Star 1.png");
+}
+.dateCom{
+    position: absolute;
+    width: 112.91px;
+    height: 25.09px;
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 131%;
+top: 26.06px;
+    left: 348.09px;
+    letter-spacing: 0.055em;
 
-    }
-    to{
-        transform: rotateY(180deg);
-
-    }
+    color: #000000;
 
 }
+.comment{
+    position: absolute;
+    width: 409px;
+    height: 328px;
+    top:76px;
+    left: 19px;
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 115.38%;
+    /* or 21px */
 
-.back_card_one{
-    animation-duration: 1s;
-    animation-name: transform_to_besin;
-    transform-style: preserve-3d;
-    position: relative;
-    z-index: 1;
 
+    color: #000000;
 }
-.off_card{
-    display: none;
+.commPhoto img{
+    position: absolute;
+    width: 480px;
+    height: 392px;
+    left: 0px;
+    top: 174px;
 }
-.back_card_one_Off{
-    animation-duration: 1s;
-    animation-name: transform_to_Off;
-    transform-style: preserve-3d;
-    position: fixed;
-    z-index: 1;
-
-    backface-visibility: hidden;
-    /*display: 1none;*/
-
+.btnRed5{
+    position: absolute;
+    width: 457px;
+    height: 83px;
+    left: 16px;
+    top: 6306px;
+    background: linear-gradient(180deg, #FF0000 0%, #470000 96.87%);
+    box-shadow: 0px 22px 44px -12px rgba(255, 37, 0, 0.86);
+    border-radius: 100px;
 }
-
-front_card_one{
-    animation-duration: 1s;
-    animation-name: transform_to_besin;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-}
-@keyframes about {
-    0%{
-       color: black;
-    }
-    50%{
-        color:#8e0101c7;
-    }
-    100%{
-        color: black;
-    }
-
-}
-#about{
-    animation-duration: 3s;
-    animation-name: about;
-    animation-iteration-count:infinite;
-}
-@keyframes about_my {
-    0% {
-      left:0px;
-
-    }
-    50%{
-        left:-2px;
-
-    }
-    100% {
-        left:0px;
-
-    }
-}
-#name_m{
-    transform-style: preserve-3d;
-    transform: rotate(20deg);
-    color:#8a2a2bcf;
-    animation-duration: 1.5s;
-    animation-name: about_my;
-    animation-iteration-count:infinite;
-
-}
-#panel, #flip {
-    background-color:#adadad;
-    border-radius: 20px 20px 0 0 ;
-    cursor: pointer;
-    position: relative;
-    z-index: 10000;
-    padding: 5px;
+.makeSh{
+    position: absolute;
+    width: 477px;
+    height: 84px;
+    top:6422px;
+    left: 3px;
+    background-image: url("./img/Group 3 10.png");
     text-align: center;
 }
+.firstStep{
+    position: absolute;
+    width: 229px;
+    height: 194px;
+    left: 0px;
+    top: 6533px;
 
-#panel {
-    border-radius: 0 0 20px 20px;
-    padding: 5%;
-    display: none;
+    background: #CED6D6;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.77);
+}
+.firstStep img{
+    position: absolute;
+    width: 101.72px;
+    height: 101.72px;
+    left: 70.82px;
+    top: 16px;
+}
+.secondStep{
+    position: absolute;
+    width: 234px;
+    height: 194px;
+    left: 251px;
+    top: 6533px;
+
+    background: #CED6D6;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.77);
+}
+.secondStep img{
+    position: absolute;
+    width: 101.72px;
+    height: 101.72px;
+    left: 66px;
+    top: 25px;
+
+}
+.thirdStep{
+    position: absolute;
+    width: 229px;
+    height: 194px;
+    left: 0px;
+    top: 6743px;
+
+    background: #CED6D6;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.77);
+}
+.thirdStep img{
+    position: absolute;
+    width: 101.72px;
+    height: 101.72px;
+    left: 72px;
+    top: 28px;
+
+}
+.foursStep{
+    position: absolute;
+    width: 234px;
+    height: 194px;
+    left: 251px;
+    top: 6743px;
+
+    background: #CED6D6;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.77);
+
+
+}
+.foursStep img{
+    position: absolute;
+    width: 101.72px;
+    height: 101.72px;
+    left: 64px;
+    top: 16px;
+}
+.firstStepTex{
+    position: absolute;
+    width: 183px;
+    height: 36px;
+    left: 28px;
+    top: 134px;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 92.7%;
+    /* or 18px */
+
+    text-align: center;
+
+    color: #000000;
 }
